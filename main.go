@@ -1,11 +1,23 @@
 package main
 
 import (
+	"fmt"
 	"slices"
 	"strings"
 )
 
 func main() {
+	sample := "hallo dunia"
+	vow, con := sortChar(sample)
+
+	fmt.Printf("vowel: %s, consonants: %s\n", string(vow), string(con))
+
+	n := minimumBuses(5, []int{1, 2, 4, 3, 3})
+	if n < 0 {
+		fmt.Printf("Input must be equal with count family\n")
+	} else {
+		fmt.Printf("minimumBuses %d\n", n)
+	}
 }
 
 func sortChar(s string) ([]rune, []rune) {
