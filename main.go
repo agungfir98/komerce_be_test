@@ -48,15 +48,6 @@ func minimumBuses(n1 int, n2 []int) int {
 		return -1
 	}
 
-	for i := range n2 {
-		if n2[i] <= 0 {
-			return -2
-		}
-		if n2[i] > maxPassenger {
-			return -3
-		}
-	}
-
 	slices.Sort(n2)
 
 	occupied := 0
